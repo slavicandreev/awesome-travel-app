@@ -7,6 +7,12 @@ class Trip extends Model {}
 // create fields/columns for Trip model
 Trip.init(
   {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
     trip_budget: {
       type: DataTypes.DECIMAL(10, 2),
       allowNull: false,
