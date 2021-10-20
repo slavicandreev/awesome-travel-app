@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
 // DELETE a trip
 router.delete('/:id', async (req, res) => {
   try {
-    const numRows = await Trip.destroy({id: req.params.id});
+    const numRows = await Trip.destroy({where: {id: req.params.id}});
     res.status(200).json(numRows);
   } catch (err) {
     res.status(500).json(err);

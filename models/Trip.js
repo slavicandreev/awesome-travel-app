@@ -23,6 +23,22 @@ Trip.init(
       allowNull: false,
       defaultValue: 1
     },
+    traveller_id: {
+      type: DataTypes.INTEGER,
+      unique: false,
+      references: {
+        model: 'traveller',
+        key: 'id',
+      },
+    },
+    location_id: {
+      type: DataTypes.INTEGER,
+      unique: false,
+      references: {
+        model: 'location',
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,
