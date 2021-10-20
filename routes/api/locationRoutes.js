@@ -3,7 +3,13 @@ const { Location, Traveller, Trip } = require('../../models');
 
 // GET all locations
 router.get('/', async (req, res) => {
-
+    try{
+    const locationData = await Location.findAll()
+    res.json(locationData)
+    }
+    catch(error) {
+        res.status(500).json(error)
+    }
 });
 
 // GET a single location
