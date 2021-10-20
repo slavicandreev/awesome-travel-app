@@ -13,7 +13,7 @@ Trip.init(
       defaultValue: 0
     },
     traveller_amount: {
-      type: DataTypes.INT,
+      type: DataTypes.INTEGER,
       allowNull: false,
       defaultValue: 1
     },
